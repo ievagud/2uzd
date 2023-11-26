@@ -1,33 +1,31 @@
 # pirmasProjektas
 
-is v1.0
-<img width="727" alt="Ekrano kopija 2023-11-25 174522" src="https://github.com/ievagud/2uzd/assets/144427953/ed9409c8-07c5-457e-9cc4-e19348fdc466">
+# **v1.1**
 
-
-is v1.1
-
-<img width="692" alt="Ekrano kopija 2023-11-25 175123" src="https://github.com/ievagud/2uzd/assets/144427953/1ac1669f-c66d-48cb-a857-f59eb318753a">
-
-v1.1 O1
-
-<img width="754" alt="Ekrano kopija 2023-11-25 180446" src="https://github.com/ievagud/2uzd/assets/144427953/9321eca1-b157-4fd6-94f9-e9a0f9820255">
-
-v1.1 O2
-<img width="755" alt="Ekrano kopija 2023-11-25 180721" src="https://github.com/ievagud/2uzd/assets/144427953/9030ec30-175b-4c5f-9c60-47c3b010e2c2">
-
-
-v1.1 O3
-
-<img width="713" alt="Ekrano kopija 2023-11-25 180940" src="https://github.com/ievagud/2uzd/assets/144427953/fec5660d-3575-4bc6-8046-c4d83259c85f">
-
-
-v1.0 o1
-
-<img width="738" alt="Ekrano kopija 2023-11-25 181221" src="https://github.com/ievagud/2uzd/assets/144427953/16ae7149-581c-4a62-a1ce-dc3220416f7c">
-
-v1.0 02
-
-<img width="730" alt="Ekrano kopija 2023-11-25 181441" src="https://github.com/ievagud/2uzd/assets/144427953/4c8aae27-273b-4af7-9fc1-cae7e485e3db">
-
-v1.0 o3
-<img width="727" alt="Ekrano kopija 2023-11-25 181710" src="https://github.com/ievagud/2uzd/assets/144427953/d6f5adc1-f3ee-494a-9ab5-d8decb6e93b6">
+PAPRASTAI
+||Nuskaitymas|Rūšiavimas|Išskirstymas|Vargšiukų išvedimas|Kietakų išvedimas|
+|-------------|-------------|-------------|-------------|-------------|-------------|
+|100tūkst.||||||
+|V1.0|2.32|0.59|0.15|0.33|0|
+|V1.1|1.41|0.11|0.04|0.15|0|
+|1mln.||||||
+|V1.0|18.07|6.08|1.24|2.25|0|
+|V1.1|14.46|1.31|0.36|1.58|0|
+|100tūkst. O1||||||
+|V1.0|1.18|0.39|0.08|0.14|0|
+|V1.1|1.51|0.12|0.04|0.22|0|
+|1mln. O1||||||
+|V1.0|13.65|4.33|0.92|1.58|0|
+|V1.1|17.32|1.40|0.36|1.92|0|
+|100tūkst. O2||||||
+|V1.0|1.24|0.37|0.09|0.15|0|
+|V1.1|1.32|0.14|0.04|0.15|0|
+|1mln. O2||||||
+|V1.0|13.29|4.31|0.82|1.57|0|
+|V1.1|14.62|1.35|0.35|1.63|0|
+|100tūkst. O3||||||
+|V1.0|1.25|0.35|0.09|0.15|0|
+|V1.1|1.35|0.14|0.04|0.15|0|
+|1mln. O3||||||
+|V1.0|13.33|4.30|0.84|1.57|0|
+|V1.1|14.50|1.27|0.38|1.62|0|
