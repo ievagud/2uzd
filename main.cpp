@@ -29,7 +29,7 @@ int main() {
             cout << "Pagal ka norite rusiuoti studentus? 1 - pagal varda. 2 - pagal pavarde. 3 - pagal galutini bala" << endl;
             cin >> rusiavimas;
 
-            vector<int> stud_sk = {1000, 10000, 100000 /*, 1000000, 10000000*/};
+            vector<int> stud_sk = {/*1000, 10000,*/ 100000, 1000000/*, 10000000*/};
 
             for (int x : stud_sk) {
 
@@ -192,12 +192,12 @@ int main() {
         }
 
 
-        Studentas someStudent; // Create an instance of Studentas
+        Studentas studentas123;
         int pasirink;
         cout << "Pasirinkite galutinio balo tipa (1 - Vidurkis, 2 - Mediana): ";
         cin >> pasirink;
 
-        someStudent.spausdintiLentele(studentuSarasas, pasirink);
+        studentas123.spausdintiLentele(studentuSarasas, pasirink);
 
     } else if (x == 3) {
 
@@ -208,9 +208,9 @@ int main() {
         cout << "Pasirinkite galutinio balo tipa (1 - Vidurkis, 2 - Mediana): ";
         cin >> pasirink;
 
-        Studentas someStudent2; // Create an instance of Studentas
+        Studentas studentas321;
 
-        someStudent2.spausdintiLentele(studentuSarasas, pasirink);
+        studentas321.spausdintiLentele(studentuSarasas, pasirink);
 
     } else {
         cout << "Netinkamas ivedimas" << endl;
