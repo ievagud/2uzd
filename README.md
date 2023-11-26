@@ -28,3 +28,5 @@
 |1mln. O3||||||
 |V1.0|13.33|4.30|0.84|1.57|0|
 |V1.1|14.50|1.27|0.38|1.62|0|
+
+V1.1 (naudojant class Studentas ir list konteinerį) veikia greičiau nei V1.0 (naudojant Studentas struktūrą, vector konteinerį ir studentų skirstymo algoritmus). Tačiau pritaikius flag'us O1, O2, O3 V1.1 sulėtėja visose atliekamose funkcijose. V1.0 naudojant flag'us pagreitėja. Palyginus V1.1 ir V1.0 veikimą pritaikant flag'us, failo nuskaitymas ir vargšiukų išvedimas į failą V1.1 yra lėtesnis palyginus su V1.0, bet studentų rūšiavimas ir išskirstymas į grupes V1.1 vyksta greičiau nei V1.0. Kadangi failo nuskaitymas yra daugiausiai laiko trunkanti funkcija, efektyviausia būtų naudoti V.1.0 su O2 flag'u.
