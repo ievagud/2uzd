@@ -2,7 +2,6 @@
 
 # **v1.1**
 
-PAPRASTAI
 ||Nuskaitymas|Rūšiavimas|Išskirstymas|Vargšiukų išvedimas|Kietakų išvedimas|
 |-------------|-------------|-------------|-------------|-------------|-------------|
 |100tūkst.||||||
