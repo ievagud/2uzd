@@ -15,7 +15,7 @@ int main() {
     double trys_p_isved = 0;
 
     int x;
-    cout << "Spauskite 1, jei norite nuskaityti duomenis is failu ir atlikti skaiciavimus. Spauskite 2, jei norite ivesti duomenis. Spauskite 3, jei norite nuskaityti faila ir isspausdinti duomenis ekrane" << endl;
+    cout << "Spauskite 1, jei norite nuskaityti duomenis is failu ir atlikti skaiciavimus. Spauskite 2, jei norite ivesti duomenis. Spauskite 3, jei norite nuskaityti faila ir isspausdinti duomenis ekrane. Spauskite 4, jei norite Rule of Three demonstravimo. " << endl;
     cin >> x;
 
     if (x == 1) {
@@ -183,34 +183,67 @@ int main() {
     } else if (x == 2) {
 
         while (true) {
-            Studentas studentai2 = Studentas::ivesk();
-            if (studentai2.getVardas() == "0") {
-                break;
-            }
+        Studentas studentai2;
+        cin >> studentai2;
 
-            studentuSarasas.push_back(studentai2);
+        if (studentai2.getVardas() == "0") {
+            break;
         }
 
+        studentuSarasas.push_back(studentai2);
+    }
 
         Studentas studentas123;
         int pasirink;
         cout << "Pasirinkite galutinio balo tipa (1 - Vidurkis, 2 - Mediana): ";
         cin >> pasirink;
 
+        Studentas::setPasirink(pasirink);
+
         studentas123.spausdintiLentele(studentuSarasas, pasirink);
 
     } else if (x == 3) {
 
-        Studentas studentai1 = Studentas::nuskaityk();
-        studentuSarasas.push_back(studentai1);
+        cout << "Iveskite failo pavadinima: ";
+        string failo_pvd;
+        cin >> failo_pvd;
+
+        Studentas::nuskaityk2(studentuSarasas, failo_pvd);
 
         int pasirink;
         cout << "Pasirinkite galutinio balo tipa (1 - Vidurkis, 2 - Mediana): ";
         cin >> pasirink;
+        Studentas::setPasirink(pasirink);
 
         Studentas studentas321;
-
         studentas321.spausdintiLentele(studentuSarasas, pasirink);
+
+    } else if (x==4){
+
+        string failo_pvd;
+        cout << "Iveskite failo pavadinima: ";
+        cin >> failo_pvd;
+
+        Studentas::nuskaityk2(studentuSarasas, failo_pvd);
+        list<Studentas> nukopijuotas1(studentuSarasas);
+
+        list<Studentas> nukopijuotas2;
+        nukopijuotas2 = studentuSarasas;
+
+        cout << "Originalus:\n";
+        for (const auto& student : studentuSarasas) {
+            cout << student.getVardas() << " " << student.getPavarde() << endl;
+        }
+
+        cout << "\nNukopijuotas 1:\n";
+        for (const auto& student : nukopijuotas1) {
+            cout << student.getVardas() << " " << student.getPavarde() << endl;
+        }
+
+        cout << "\nNukopijuotas 2:\n";
+        for (const auto& student : nukopijuotas2) {
+            cout << student.getVardas() << " " << student.getPavarde() << endl;
+        }
 
     } else {
         cout << "Netinkamas ivedimas" << endl;
@@ -219,3 +252,4 @@ int main() {
 
     return 0;
 }
+
