@@ -1,27 +1,22 @@
 #include "mylib.h"
 
-Studentas Studentas::ivesk() {
-    Studentas temp;
+int Studentas::pasirink = 1;
 
+std::istream& operator>>(std::istream& is, Studentas& student) {
     cout << "Iveskite varda (arba 0, jei norite baigti ivedima): ";
-    string ivedVardas;
-    cin >> ivedVardas;
+    is >> student.vardas;
 
-    temp.setVardas(ivedVardas);
-
-    if (temp.getVardas() == "0") {
-        return temp;
+    if (student.vardas == "0") {
+        return is;
     }
 
     cout << "Iveskite pavarde: ";
-    string ivedPavarde;
-    cin >> ivedPavarde;
-    temp.setPavarde(ivedPavarde);
+    is >> student.pavarde;
 
     double pazymys;
     cout << "Ar norite sugeneruoti atsitiktinius pazymius? (1 - Taip, 0 - Ne): ";
     double rand_pazymiai;
-    cin >> rand_pazymiai;
+    is >> rand_pazymiai;
 
     if (rand_pazymiai == 1) {
         srand(time(0));
@@ -29,29 +24,28 @@ Studentas Studentas::ivesk() {
         cout << "Sugeneruoti atsitiktiniai pazymiai: ";
         for (int i = 0; i < rand_pazymiu_sk; ++i) {
             int rand_pazymys = rand() % 11;
-            temp.getPazymiai().push_back(rand_pazymys);
+            student.pazymiai.push_back(rand_pazymys);
             cout << rand_pazymys << " ";
         }
         cout << endl;
 
         srand(time(0));
-        temp.egzaminas = rand() % 11;
-        cout << "Sugeneruotas egzamino pazymys: " << temp.egzaminas << endl;
+        student.egzaminas = rand() % 11;
+        cout << "Sugeneruotas egzamino pazymys: " << student.egzaminas << endl;
         cout << "\n";
-
     } else {
         double pazymys;
 
         while (true) {
             try {
                 cout << "Iveskite pazymi (nuo 0 iki 10, iveskite -1, jei norite baigti ivedima ): ";
-                if (cin >> pazymys) {
+                if (is >> pazymys) {
                     if (pazymys == -1) {
                         break;
                     }
 
                     if (pazymys >= 0 && pazymys <= 10) {
-                        temp.pazymiai.push_back(pazymys);
+                        student.pazymiai.push_back(pazymys);
                     } else {
                         throw invalid_argument("Ivestas pazymys neatitinka intervalo [0-10]!");
                     }
@@ -60,8 +54,8 @@ Studentas Studentas::ivesk() {
                 }
             } catch (const invalid_argument& e) {
                 cout << e.what() << endl;
-                cin.clear();
-                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                is.clear();
+                is.ignore(numeric_limits<streamsize>::max(), '\n');
             }
         }
 
@@ -71,9 +65,9 @@ Studentas Studentas::ivesk() {
             try {
                 cout << "Iveskite egzamino pazymi (0-10): ";
 
-                if (cin >> egz) {
+                if (is >> egz) {
                     if (egz >= 0 && egz <= 10) {
-                        temp.egzaminas = egz;
+                        student.egzaminas = egz;
                         break;
                     } else {
                         throw invalid_argument("Ivestas pazymys neatitinka intervalo [0-10]!");
@@ -83,50 +77,40 @@ Studentas Studentas::ivesk() {
                 }
             } catch (const invalid_argument& e) {
                 cout << e.what() << endl;
-                cin.clear();
-                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                is.clear();
+                is.ignore(numeric_limits<streamsize>::max(), '\n');
             }
         }
     }
 
-    temp.rez_vid = 0.4 * vidurkis(temp.pazymiai) + 0.6 * temp.egzaminas;
-    temp.rez_med = 0.4 * mediana(temp.pazymiai) + 0.6 * temp.getEgzaminas();
+    student.rez_vid = 0.4 * Studentas::vidurkis(student.pazymiai) + 0.6 * student.egzaminas;
+    student.rez_med = 0.4 * Studentas::mediana(student.pazymiai) + 0.6 * student.getEgzaminas();
 
-    return temp;
+    return is;
 }
 
-
-
 void Studentas::spausdintiLentele(const list<Studentas>& studentuSarasas, int pasirink) const {
-if (pasirink == 1) {
-        cout << "\n";
-        cout << left << setw(15) << "Vardas" << setw(15) << "Pavarde" << setw(20) << "Galutinis (Vid.)" << setw(20) << "Adresas" << "\n";
-        cout << string(80, '-') << endl;
-        for (const Studentas& student : studentuSarasas) {
-            cout << left << setw(15) << student.vardas << setw(20) << student.pavarde << setw(15) << fixed << setprecision(2) << student.rez_vid << setw(20) << &student << "\n";
-        }
+    cout << "\n";
+    cout << left << setw(15) << "Vardas" << setw(15) << "Pavarde";
+
+    if (pasirink == 1) {
+        cout << setw(20) << "Galutinis (Vid.)";
     } else if (pasirink == 2) {
-        cout << "\n";
-        cout << left << setw(15) << "Vardas" << setw(15) << "Pavarde" << setw(20) << "Galutinis (Med.)" << setw(20) << "Adresas" << "\n";
-        cout << string(80, '-') << endl;
-        for (const Studentas& student : studentuSarasas) {
-            cout << left << setw(15) << student.vardas << setw(20) << student.pavarde << setw(15) << fixed << setprecision(2) << student.rez_med << setw(20) << &student << "\n";
-        }
+        cout << setw(20) << "Galutinis (Med.)";
     } else {
-        cout << "Netinkamas pasirinkimas, rodomas galutinis su vidurkiu: " << "\n";
+        cout << setw(20) << "Galutinis";
+    }
+
+    cout << setw(20) << "Adresas" << "\n";
+    cout << string(80, '-') << endl;
+
+    for (const Studentas& student : studentuSarasas) {
+        cout << student;
         cout << "\n";
-        cout << left << setw(15) << "Vardas" << setw(15) << "Pavarde" << setw(20) << "Galutinis" << setw(20) << "Adresas" << "\n";
-        cout << string(50, '-') << endl;
-        for (const Studentas& student : studentuSarasas) {
-            cout << left << setw(15) << student.vardas << setw(20) << student.pavarde << setw(5) << fixed << setprecision(2) << student.rez_vid << setw(20) << &student << "\n";
-        }
     }
 
     cout << string(80, '-') << endl;
-
 }
-
-
 
 Studentas Studentas::nuskaityk() {
 string failo_pvd;
@@ -193,8 +177,6 @@ string failo_pvd;
 
 }
 
-
-
 void Studentas::generavimas(int stud_sk) {
 string failopavadinimas;
 
@@ -248,8 +230,6 @@ string failopavadinimas;
 
 }
 
-
-
 void Studentas::nuskaityk2(list<Studentas>& vekt, string failopvd) {
 ifstream failas(failopvd);
     if (!failas.is_open()) {
@@ -288,9 +268,6 @@ ifstream failas(failopvd);
     }
 }
 
-
-
-
 void Studentas::sort_galutinio(list<Studentas>& studentai, list<Studentas>& vargsiukai) {
 auto it = studentai.begin();
     while (it != studentai.end()) {
@@ -303,8 +280,6 @@ auto it = studentai.begin();
     }
 
 }
-
-
 
 void Studentas::irasymas_i_faila(const list<Studentas>& studentai, const string& failo_pvd) {
 ofstream outputas(failo_pvd);
@@ -325,8 +300,6 @@ ofstream outputas(failo_pvd);
 
 }
 
-
-
 bool Studentas::palyginimas(const Studentas& a, const Studentas& b, int rusiavimas) {
 if (rusiavimas == 1) {
         return a.getVardas() < b.getVardas();
@@ -340,11 +313,24 @@ if (rusiavimas == 1) {
 
 }
 
-
-
 void Studentas::rusiuotiStudentus(list<Studentas>& studentai, int rusiavimas) {
 studentai.sort([rusiavimas](const Studentas& a, const Studentas& b) {
         return palyginimas(a, b, rusiavimas);
     });
 
+}
+
+std::ostream& operator<<(std::ostream& os, const Studentas& student) {
+    os << left << setw(15) << student.getVardas()
+       << left << setw(25) << student.getPavarde();
+
+    if (Studentas::pasirink == 1) {
+        os <<setw(15)<< fixed << setprecision(2) << student.getRezVid();
+    } else {
+        os <<setw(15)<< fixed << setprecision(2) << student.getRezMed();
+    }
+
+    os << left << setw(20) << &student;
+
+    return os;
 }
