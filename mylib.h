@@ -18,6 +18,9 @@
 
 #include <list>
 
+#include <iostream>
+
+
 using std::cout;
 using std::cin;
 using std::endl;
@@ -45,6 +48,7 @@ using std::uniform_int_distribution;
 using std::list;
 
 class Studentas {
+
 private:
     string vardas;
     string pavarde;
@@ -52,10 +56,37 @@ private:
     double egzaminas;
     double rez_vid;
     double rez_med;
+    static int pasirink;
 
 public:
 
-    Studentas() : egzaminas(0), rez_vid(0), rez_med(0){}
+    Studentas() : vardas(""), pavarde(""), pazymiai(), egzaminas(0), rez_vid(0), rez_med(0){}
+
+    ~Studentas() {}
+
+
+    Studentas(const Studentas& other) {
+        vardas = other.vardas;
+        pavarde = other.pavarde;
+        pazymiai = other.pazymiai;
+        egzaminas = other.egzaminas;
+        rez_vid = other.rez_vid;
+        rez_med = other.rez_med;
+    }
+
+    Studentas& operator=(const Studentas& other) {
+        if (this != &other) {
+            vardas = other.vardas;
+            pavarde = other.pavarde;
+            pazymiai = other.pazymiai;
+            egzaminas = other.egzaminas;
+            rez_vid = other.rez_vid;
+            rez_med = other.rez_med;
+        }
+        return *this;
+    }
+
+
 
     string getVardas() const {
         return vardas;
@@ -64,45 +95,49 @@ public:
         vardas = newVardas;
     }
 
-
     string getPavarde() const{
-        return vardas;
+        return pavarde;
     }
     void setPavarde(const string& newPavarde){
         pavarde = newPavarde;
     }
 
-
     void addPazymys(int pazymys) {
         pazymiai.push_back(pazymys);
     }
 
-
-    vector<double>& getPazymiai() {
+     vector<double> getPazymiai() const {
         return pazymiai;
     }
+
     void setPazymiai(const vector<double>& newPazymiai);
 
 
     double getEgzaminas() const {
         return egzaminas;
     }
-    void setEgzaminas(double newEgzaminas);
 
+    void setEgzaminas(double newEgzaminas);
 
     double getRezVid() const{
         return rez_vid;
     }
+
     void setRezVid(double rezVid){
-     rez_vid = rezVid;
+        rez_vid = rezVid;
     }
 
+    double getRezMed() const{
+        return rez_vid;
+    }
 
-    double getRezMed() const;
     void setRezMed(double rezMed){
      rez_med = rezMed;
     }
 
+    static void setPasirink(int pas) {
+        pasirink = pas;
+    }
 
     static double mediana(const vector<double>& pazymiai) {
         if (pazymiai.empty()) {
@@ -134,6 +169,10 @@ public:
     static void irasymas_i_faila(const list<Studentas>& studentai, const string& failo_pvd);
     static bool palyginimas(const Studentas& a, const Studentas& b, int rusiavimas);
     static void rusiuotiStudentus(list<Studentas>& studentai, int rusiavimas);
+
+    friend std::istream& operator>>(std::istream& is, Studentas& student);
+    friend std::ostream& operator<<(std::ostream& os, const Studentas& student);
 };
+
 
 #endif // MYLIB_H_INCLUDED
