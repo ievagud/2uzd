@@ -11,15 +11,11 @@
 #include <sstream>
 #include <stdexcept>
 #include <random>
-
 #include <fstream>
 #include <ctime>
 #include <cstdlib>
-
 #include <list>
-
 #include <iostream>
-
 
 using std::cout;
 using std::cin;
@@ -39,15 +35,14 @@ using std::istringstream;
 using std::cerr;
 using std::invalid_argument;
 using std::out_of_range;
-
 using std::ofstream;
 using std::to_string;
 using std::default_random_engine;
 using std::uniform_int_distribution;
-
 using std::list;
 
-class Studentas {
+
+/*class Studentas {
 
 private:
     string vardas;
@@ -172,7 +167,7 @@ public:
 
     friend std::istream& operator>>(std::istream& is, Studentas& student);
     friend std::ostream& operator<<(std::ostream& os, const Studentas& student);
-};
+};*/
 
 
 #endif // MYLIB_H_INCLUDED
