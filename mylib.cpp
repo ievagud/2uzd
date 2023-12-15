@@ -1,4 +1,6 @@
 #include "mylib.h"
+#include "Zmogus.h"
+#include "Studentas.h"
 
 int Studentas::pasirink = 1;
 
