@@ -5,6 +5,14 @@
 
 int main() {
 
+    /*Studentas studentas1;
+    cin >> studentas1;
+    Studentas studentas2(studentas1);
+    Studentas studentas3=studentas1;
+    cout << studentas1 << endl;
+    cout << studentas2 << endl;
+    cout << studentas3 << endl;*/
+
     list<Studentas> studentuSarasas;
     list<Studentas> nuskaitymui;
     list<Studentas> vargsiukai;
@@ -17,7 +25,7 @@ int main() {
     double trys_p_isved = 0;
 
     int x;
-    cout << "Spauskite 1, jei norite nuskaityti duomenis is failu ir atlikti skaiciavimus. Spauskite 2, jei norite ivesti duomenis. Spauskite 3, jei norite nuskaityti faila ir isspausdinti duomenis ekrane. Spauskite 4, jei norite Rule of Three demonstravimo. Spauskite 5, jei norite kurti Zmogaus klases ir Studento klases objektus " << endl;
+    cout << "Spauskite 1, jei norite nuskaityti duomenis is failu ir atlikti skaiciavimus. Spauskite 2, jei norite ivesti duomenis. Spauskite 3, jei norite nuskaityti faila ir isspausdinti duomenis ekrane. Spauskite 5, jei norite kurti Zmogaus klases ir Studento klases objektus " << endl;
     cin >> x;
 
     if (x == 1) {
@@ -220,39 +228,13 @@ int main() {
         Studentas studentas321;
         studentas321.spausdintiLentele(studentuSarasas, pasirink);
 
-    } else if (x==4){
-
-        string failo_pvd;
-        cout << "Iveskite failo pavadinima: ";
-        cin >> failo_pvd;
-
-        Studentas::nuskaityk2(studentuSarasas, failo_pvd);
-        list<Studentas> nukopijuotas1(studentuSarasas);
-
-        list<Studentas> nukopijuotas2;
-        nukopijuotas2 = studentuSarasas;
-
-        cout << "Originalus:\n";
-        for (const auto& student : studentuSarasas) {
-            cout << student.getVardas() << " " << student.getPavarde() << endl;
-        }
-
-        cout << "\nNukopijuotas 1:\n";
-        for (const auto& student : nukopijuotas1) {
-            cout << student.getVardas() << " " << student.getPavarde() << endl;
-        }
-
-        cout << "\nNukopijuotas 2:\n";
-        for (const auto& student : nukopijuotas2) {
-            cout << student.getVardas() << " " << student.getPavarde() << endl;
-        }
-
-
     } else if (x==5){
 
         cout << "Klasiu demonstravimas:" << endl;
 
-        /*Zmogus humanObject;*/
+        Zmogus humanObject;
+        Studentas studentas1;
+        cin >> studentas1;
 
 
 
