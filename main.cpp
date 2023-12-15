@@ -1,5 +1,7 @@
 #include "mylib.h"
 #include "timer.h"
+#include "Zmogus.h"
+#include "Studentas.h"
 
 int main() {
 
@@ -15,7 +17,7 @@ int main() {
     double trys_p_isved = 0;
 
     int x;
-    cout << "Spauskite 1, jei norite nuskaityti duomenis is failu ir atlikti skaiciavimus. Spauskite 2, jei norite ivesti duomenis. Spauskite 3, jei norite nuskaityti faila ir isspausdinti duomenis ekrane. Spauskite 4, jei norite Rule of Three demonstravimo. " << endl;
+    cout << "Spauskite 1, jei norite nuskaityti duomenis is failu ir atlikti skaiciavimus. Spauskite 2, jei norite ivesti duomenis. Spauskite 3, jei norite nuskaityti faila ir isspausdinti duomenis ekrane. Spauskite 4, jei norite Rule of Three demonstravimo. Spauskite 5, jei norite kurti Zmogaus klases ir Studento klases objektus " << endl;
     cin >> x;
 
     if (x == 1) {
@@ -245,6 +247,15 @@ int main() {
             cout << student.getVardas() << " " << student.getPavarde() << endl;
         }
 
+
+    } else if (x==5){
+
+        cout << "Klasiu demonstravimas:" << endl;
+
+        /*Zmogus humanObject;*/
+
+
+
     } else {
         cout << "Netinkamas ivedimas" << endl;
         return 1;
@@ -252,4 +263,5 @@ int main() {
 
     return 0;
 }
+
 
