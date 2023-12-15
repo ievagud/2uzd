@@ -36,7 +36,7 @@ V1.1 (naudojant class Studentas ir list konteinerį) veikia greičiau nei V1.0 (
 
 v1.2 atsiranda įvedimo ir išvedimo (input/output) operatoriai. Įvedimo operatorius panaudojamas vietoje funkcijos įvesk. Išvedimo - spausdinant kiekvieną studentą spausdintiLentele funkcijoje. Rule of three: yra destruktorius (destructor), kopijavimo kontruktorius (copy constructor) ir priskyrimo operatorius (copy assignment operator).
 
-#**v1.5**
+# **v1.5**
 
 v1.5 realizuota abstrakti klasė Zmogus, bandant kurti jos objektą, gauname klaidą: cannot declare variable 'humanObject' to be of abstract type 'Zmogus'
 
