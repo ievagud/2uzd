@@ -43,3 +43,28 @@ v1.5 realizuota abstrakti klasė Zmogus, bandant kurti jos objektą, gauname kla
 <img width="591" alt="image" src="https://github.com/ievagud/2uzd/assets/144427953/414e78a2-0c68-45dc-ae7c-051a212d79dc">
 
 Taip pat yra klasė Studentas, kuri yra išvestinė (derived) iš klasės Zmogus.
+
+# **v3.0**
+
+v3.0 sukurti setup.exe ir ProgramInstallSetup.msi failai. Instaliavus programą, ją galima paleisti iš Start Menu arba darbalaukio. Per setup.exe failą taip pat galima tvarkingai išinstaliuoti programą.  
+
+# Naudojimosi instrukcija
+
+Vartotojui norint naudotis programa, jis turi atsisiųsti ProgramInstallSetup.msi ir setup.exe failus, bei instaliuoti programą, atidarius setup.exe. Vartotojas turi pasirinkti, kur bus instaliuojama programa. Kur vartotojas pasirinks instaliuoti programą, ten pat bus saugomi sugeneruoti failai. Jei bus norima naudoti programą failams nuskaityti, nuskaitomi failai turės būti laikomi toje pačioje vietoje, kur buvo instaliuota programa. Instaliavus, vartotojas gali paleisti programą iš darbalaukio arba iš Start Menu. Paleidus programą, vartotojas turi 3 pasirinkimus:
+
+**1 Pasirinkimas**
+
+Spausti 1, jei norite nuskaityti duomenis iš failų ir atlikti skaičiavimus (atlikti funkcijų veikimo laiko matavimus). Pasirinkus šį kelią, vartotojo prašoma pasirinkti dar kartą:
+
+- Spausti 1, jei norite sugeneruoti failus, juos nuskaityti ir atlikti laiko skaičiavimus. Vartotojui pasirinkus šį variantą,  jis turi pasirinkti pagal ką rūšiuoti rezultatus (1 - pagal vardą, 2 - pagal pavardę, 3 - pagal galutinį balą). Tuomet sugeneruojami 2 studentų failai: 1000.txt, 10000.txt.. Po to jie yra nuskaitomi, išskirstomi pagal studentų pažymius į kitus du naujus failus kietakai.txt ir vargšiukai.txt. Kiekvienam pradiniam failui sukuriama po du vargšiukų ir kietakų failus.
+
+- Spausti 2, jei norite nuskaityti jau egzistuojančius failus ir atlikti laiko skaičiavimus. Tuomet vartotojo prašoma įvesti failų pavadinimus, kuriuos norės nuskaityti. Galima įvesti kelis failus. Įvedimas baigiasi, kai vartotojas vietoje failo pavadinimo įveda 0. Taip pat reikia įvesti pagal ką norima rūšiuoti galutinius rezultatus (1 - pagal vardą, 2 - pagal pavardę, 3 - pagal galutinį balą). Tuomet vyksta įvestų failų nuskaitymas, išskirstymas pagal pažymius, naujų failų (vargšiukai, kietakai) sukūrimas.
+
+**2 Pasirinkimas**
+  
+Spausti 2, jei norite įvesti duomenis ranka. Vartotojui paspaudus 2, reikia įvesti studento vardą, pavardę, tuomet pasirinkti ar sugeneruoti namų darbų ir egzamino pažymius atsitiktinai (1), ar jie bus įvedami ranka (0). Baigus įvesti vieno studento duomenis, galima vesti kito studento duomenis arba įvesti 0 ir tuomet įvedimas baigiasi. Toliau vartotojo prašoma pasirinkti su kuo skaičiavus išspausdinti galutinį pažymį, su vidurkiu (1), su mediana (2). Galiausiai išspausdinama lentelė  su studento duomenimis.
+
+**3 Pasirinkimas**
+
+Spausti 3, jei norite nuskaityti failą ir išspausdinti duomenis ekrane. Paspaudus 3, vartotojo prašoma įvesti failo, kurį nori nuskaityti pavadinimą. Tuomet reikia pasirinkti su kuo skaičiuoti galutinį balą: su vidurkiu (1), su mediana (2). Galiausiai  įvestas failas yra nuskaitomas ir išspausdinamas ekrane.
+
