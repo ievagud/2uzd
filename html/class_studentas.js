@@ -1,0 +1,25 @@
+var class_studentas =
+[
+    [ "Studentas", "class_studentas.html#ab459e995e8c9b24cdc9aec5b09a66539", null ],
+    [ "Studentas", "class_studentas.html#a32739eae10d98feb6da517336775f135", null ],
+    [ "~Studentas", "class_studentas.html#a63e449e0f51a0b14340d02ee71b4be23", null ],
+    [ "Studentas", "class_studentas.html#aef0484fe46cf05746f8ffc0d083fcf3e", null ],
+    [ "addPazymys", "class_studentas.html#ac64090134601173b29cf0bc7df6c4cc6", null ],
+    [ "getEgzaminas", "class_studentas.html#a513d2d40da9692be76d4763ec79294d1", null ],
+    [ "getPavarde", "class_studentas.html#a5dd7dab43d87cee10ce8b65851adb046", null ],
+    [ "getPazymiai", "class_studentas.html#a2fd73124e145897c42d506416e2e03df", null ],
+    [ "getRezMed", "class_studentas.html#af9e7619cf39561bb1813e0965b7f8d29", null ],
+    [ "getRezVid", "class_studentas.html#a2e8ccd5b357153eb36ddac24d16466ac", null ],
+    [ "getVardas", "class_studentas.html#a7658f22795330130632ac24769a2fd43", null ],
+    [ "kalba", "class_studentas.html#aae08b61f89c5d516f71ba5b7a964b739", null ],
+    [ "operator=", "class_studentas.html#a25bcc531503d3bc490dab4a656e3b8e9", null ],
+    [ "setEgzaminas", "class_studentas.html#a662052d2bb6411ac8257667a65605726", null ],
+    [ "setPavarde", "class_studentas.html#a666c5b7cb978a8d6288b09ea416f204c", null ],
+    [ "setPazymiai", "class_studentas.html#afc5b291533d086132222f3afa3d4cf31", null ],
+    [ "setRezMed", "class_studentas.html#a6b68fa37710810676c637ef967ba8926", null ],
+    [ "setRezVid", "class_studentas.html#a347c014adf7398c4f47cd45bc81504ec", null ],
+    [ "setVardas", "class_studentas.html#ab21155321924e9b5a975c3b5d50b022c", null ],
+    [ "spausdintiLentele", "class_studentas.html#a2d6daca09e17975db0d46af32f2175ee", null ],
+    [ "operator<<", "class_studentas.html#a35a55ed851dc9695ac44fbc880766631", null ],
+    [ "operator>>", "class_studentas.html#a7881fc1a8559fe66fee6bf84b1f79968", null ]
+];
