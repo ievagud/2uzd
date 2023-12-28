@@ -43,3 +43,16 @@ v1.5 realizuota abstrakti klasė Zmogus, bandant kurti jos objektą, gauname kla
 <img width="591" alt="image" src="https://github.com/ievagud/2uzd/assets/144427953/414e78a2-0c68-45dc-ae7c-051a212d79dc">
 
 Taip pat yra klasė Studentas, kuri yra išvestinė (derived) iš klasės Zmogus.
+
+# **v2.0**
+
+v2.0 sukurta programos dokumentacija, naudojant Doxygen.
+
+<img width="925" alt="image" src="https://github.com/ievagud/2uzd/assets/144427953/332e63b4-dd3d-4387-92b8-1e60b5314505">
+
+<img width="924" alt="image" src="https://github.com/ievagud/2uzd/assets/144427953/a22c6dfc-f224-4f59-8744-fd426e9c6158">
+
+<img width="924" alt="image" src="https://github.com/ievagud/2uzd/assets/144427953/b99757e3-f137-4919-97df-24d0ff00beb0">
+
+
+
